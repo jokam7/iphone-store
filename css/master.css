@@ -1,5 +1,5 @@
 p {
-    color: blue;
+    color: black;
     font-size: 40px;
     width: 100%;
     padding: 50px;
@@ -9,7 +9,30 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     position: relative;
-    left: 550
+    left: 550;
+    transition-duration: 1s;
+    animation-name: change-color;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: #f35246;
+    }
+
+    50% {
+        background-color: cadetblue;
+    }
+
+    75% {
+        background-color: #f35246;
+    }
+
+    100% {
+        background-color: darkslategrey;
+    }
 }
 
 table {
@@ -43,4 +66,8 @@ a:hover {
 
 a:visited {
     color: tomato;
+}
+
+p:hover {
+    margin: 20px;
 }
